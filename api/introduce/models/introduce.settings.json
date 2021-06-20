@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "introduces",
+  "info": {
+    "name": "introduce",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Stage": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
